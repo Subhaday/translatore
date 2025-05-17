@@ -8,7 +8,7 @@ function App() {
 
   const handleTranslate = async () => {
     try {
-      const response = await axios.post('https://libretranslate.de/translate', {
+      const response = await axios.post('https://libretranslate.com/translate', {
         q: text,
         source: 'en',
         target: toLang,
