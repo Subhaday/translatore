@@ -8,12 +8,17 @@ function App() {
 
   const handleTranslate = async () => {
     try {
-      const response = await axios.post('https://libretranslate.com/translate', {
-        q: text,
-        source: 'en',
-        target: toLang,
-        format: 'text'
-      });
+const response = await axios.post('https://libretranslate.com/translate', {
+  q: text,
+  source: 'en',
+  target: toLang,
+  format: 'text'
+}, {
+  headers: {
+    'Content-Type': 'application/json'
+  }
+});
+
 
       console.log(response)
       setTranslated(response.data.translatedText);
