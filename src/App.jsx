@@ -8,7 +8,7 @@ function App() {
 
   const handleTranslate = async () => {
     try {
-      const response = await axios.post('https://cors-anywhere.herokuapp.com/https://libretranslate.com/translate', {
+      const response = await axios.post('https://libretranslate.de/translate', {
         q: text,
         source: 'en',
         target: toLang,
